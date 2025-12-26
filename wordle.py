@@ -69,6 +69,7 @@ for guess_num in range(1,7):
 	new_guess = check(word_to_guess, bad_letter, guess)
 	jobjs = list()
 
+	#accesses both the index and value stored for new_guess and makes a list of letter objects composed of these values
 	for idx, v in enumerate(new_guess):
 		jobjs.append(Letter(str(v),idx))
 
@@ -84,10 +85,10 @@ for guess_num in range(1,7):
 		else:
 			print("🟥", end="")
 	
-	#Handles the display of the ending of the game, either winning, or runnign out of guesses		
+	#Handles the display of the ending of the game, either winning, or running out of guesses and losing
 	if zxx == word_to_guess:
 		print("")
-		print("you guessed it!")
+		print("You guessed it! Congradulations 🎉🎈")
 		break
 	if guess_num == 6:
 		print("")
